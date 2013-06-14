@@ -1,4 +1,5 @@
 var permutationSolve = require('./lib/permutation.js');
+var gcd = require('gcd');
 
 exports = module.exports = function (xs) {
     return evaluate(solve(xs));
@@ -27,5 +28,11 @@ function solve (xs) {
         return [ [ '*', mean ] ];
     }
     
-    return permutationSolve(xs);
+    var factor = xs.reduce(gcd);
+    if (factor > 1) {
+        return [ ['*', factor] ].concat(permutationSolve(xs.map(function (x) {
+            return x / factor;
+        })));
+    }
+    else return permutationSolve(xs);
 }
