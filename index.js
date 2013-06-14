@@ -26,7 +26,7 @@ function solve (xs) {
         if (xs[i+1] / xs[i] !== mean) break;
     }
     if (i === xs.length - 1) {
-        return [ [ '^', mean ] ];
+        return [ [ mean, '^' ] ];
     }
     
     var factor = xs.reduce(gcd);
