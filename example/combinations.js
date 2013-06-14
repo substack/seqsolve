@@ -17,7 +17,7 @@ function check (f) {
         if (x !== sequence[i]) {
             if (i > best) {
                 best = i;
-                console.log('best: ' + best);
+                console.log('best (' + best + '): ' + pretty(f));
             }
             return false;
         }
@@ -32,7 +32,7 @@ ops.forEach(function (op) {
     });
 });
 
-for (var i = 1; i < 10000; i++) {
+for (var i = 1; true; i++) {
     combinations(partials, i, function (comb) {
         var f = solver.eval(comb);
         if (check(f)) {
@@ -49,4 +49,11 @@ function combinations (xs, n, f) {
             f([x].concat(x_));
         });
     });
+}
+
+function pretty (f) {
+    return (f+'').replace(/\n/g,'')
+        .replace(/^function anonymous\(n\) {return /, '')
+        .replace(/}$/, '')
+    ;
 }
