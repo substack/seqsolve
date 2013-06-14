@@ -30,7 +30,9 @@ function evaluate (terms) {
     var src = 'return '
         + Array(terms.length).join('(')
         + 'n'
-        + terms.map(function (t) { return t.join('') }).join(')')
+        + terms.map(function (t) {
+            return t[0] + '(' + t[1] + ')';
+        }).join(')')
     ;
     return Function('n', src);
 }
