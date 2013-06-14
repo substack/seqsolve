@@ -1,3 +1,5 @@
+var permutationSolve = require('./lib/permutation.js');
+
 exports = module.exports = function (xs) {
     return evaluate(solve(xs));
 };
@@ -24,6 +26,8 @@ function solve (xs) {
     if (i === xs.length - 1) {
         return [ [ '*', mean ] ];
     }
+    
+    return permutationSolve(xs);
 }
 
 function evaluate (terms) {
