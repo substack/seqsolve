@@ -4,7 +4,7 @@ exports = module.exports = function (xs) {
     return evaluate(solve(xs));
 };
 exports.solve = solve;
-exports.eval = evaluate;
+var evaluate = exports.eval = require('./lib/eval.js');
 
 function solve (xs) {
     var res = [];
@@ -28,22 +28,4 @@ function solve (xs) {
     }
     
     return permutationSolve(xs);
-}
-
-function evaluate (terms) {
-    var src = 'return '
-        + terms.map(function (t) {
-            if (t[0] === '/') return 'Math.floor(';
-            else return '(';
-        }).join('')
-        + 'n'
-        + terms.map(function (t) {
-            if (t[0] === '/') {
-                return t[0] + '(' + t[1] + ')';
-            }
-            return t[0] + '(' + t[1] + ')';
-        }).join(')')
-        + ')'
-    ;
-    return Function('n', src);
 }
