@@ -16,7 +16,8 @@ function solve (xs) {
         if (xs[i+1] - xs[i] !== slope) break;
     }
     if (i === xs.length - 1) {
-        return [ [ '+', slope ] ];
+        var b = xs[0] - slope;
+        return [ [ '*', slope ], [ '+', b ] ];
     }
     
     // geometric
@@ -25,7 +26,7 @@ function solve (xs) {
         if (xs[i+1] / xs[i] !== mean) break;
     }
     if (i === xs.length - 1) {
-        return [ [ '*', mean ] ];
+        return [ [ '^', mean ] ];
     }
     
     var factor = xs.reduce(gcd);
