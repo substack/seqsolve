@@ -11,9 +11,8 @@ var sequence = process.argv.slice(2).map(Number);
 var best = 0;
 
 function check (f) {
-    var x = sequence[0];
-    for (var i = 1; i < sequence.length; i++) {
-        x = f(x);
+    for (var i = 0; i < sequence.length; i++) {
+        var x = f(i+1);
         if (x !== sequence[i]) {
             if (i > best) {
                 best = i;
@@ -37,6 +36,7 @@ for (var i = 1; true; i++) {
         var f = solver.eval(comb);
         if (check(f)) {
             console.dir(comb);
+            console.log(pretty(f));
             process.exit(0);
         };
     });
