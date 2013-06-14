@@ -15,6 +15,15 @@ function solve (xs) {
     if (i === xs.length - 1) {
         return [ [ '+', slope ] ];
     }
+    
+    // geometric
+    var mean = xs[1] / xs[0];
+    for (var i = 1; i < xs.length - 1; i++) {
+        if (xs[i+1] / xs[i] !== mean) break;
+    }
+    if (i === xs.length - 1) {
+        return [ [ '*', mean ] ];
+    }
 }
 
 function evaluate (terms) {
