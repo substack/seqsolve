@@ -2,6 +2,10 @@
 
 generate an algebraic formula for a sequence
 
+[![build status](https://secure.travis-ci.org/substack/seqsolve.png)](http://travis-ci.org/substack/seqsolve)
+
+[![browser support](https://ci.testling.com/substack/seqsolve.png)](http://ci.testling.com/substack/seqsolve)
+
 # example
 
 ## command-line
