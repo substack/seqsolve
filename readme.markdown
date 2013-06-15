@@ -104,10 +104,16 @@ return ((n*(n))+(2))
 
 # install
 
-With [npm](https://npmjs.org) do:
+With [npm](https://npmjs.org), to get the library do:
 
 ```
 npm install seqsolve
+```
+
+and to get the command, do:
+
+```
+npm install -g seqsolve
 ```
 
 # todo
