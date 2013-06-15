@@ -1,8 +1,11 @@
 {
     "name": "seqsolve",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "generate an algebraic formula for a sequence",
     "main": "index.js",
+    "bin": {
+        "seqsolve": "bin/solve.js"
+    },
     "dependencies": {
         "optimist": "~0.5.2",
         "gcd": "~0.0.0"
