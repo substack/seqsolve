@@ -1,6 +1,6 @@
 {
     "name": "seqsolve",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "generate an algebraic formula for a sequence",
     "main": "index.js",
     "bin": {
