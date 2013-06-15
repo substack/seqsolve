@@ -122,6 +122,7 @@ npm install -g seqsolve
 
 # todo
 
+* [implement A=B algorithms](http://www.math.upenn.edu/~wilf/AeqB.pdf)
 * [Lagrange Polynomials](http://en.wikipedia.org/wiki/Lagrange_polynomial)
 
 # license
