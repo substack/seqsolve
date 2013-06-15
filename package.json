@@ -1,0 +1,31 @@
+{
+    "name": "seqsolve",
+    "version": "0.0.0",
+    "description": "generate an algebraic formula for a sequence",
+    "main": "index.js",
+    "dependencies": {
+        "optimist": "~0.5.2",
+        "gcd": "~0.0.0"
+    },
+    "devDependencies": {
+        "tape": "~1.0.4"
+    },
+    "scripts": {
+        "test": "tap test/*.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/substack/seqsolve.git"
+    },
+    "homepage": "https://github.com/substack/seqsolve",
+    "keywords": [
+        "sequence",
+        "mathematics"
+    ],
+    "author": {
+        "name": "James Halliday",
+        "email": "mail@substack.net",
+        "url": "http://substack.net"
+    },
+    "license": "MIT"
+}
